@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<link rel="stylesheet" type="text/css" href="userTable.css">
+</head>
+<body>
+    <h2>User Data</h2>
+    <section class="search">
+      <label for="fname">Search By Name:</label><br>
+      <div id="search-box">
+        <input type="text" id="serach-input" placeholder="names.." onkeyup="searchFun()">
+    </div><br>
+    </section>
+    <section class="table-data">
+      <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>DOB</th>
+                <th>Age</th>
+                <th>Place</th>
+                <th>Interests</th>
+              </tr>
+        </thead>
+        <tbody id="tableData">
+        </tbody>
+        
+      </table>
+    </section>
+    
+<section id="form-data">
+ <div id="left">
+  <form id="myForm" name="myForm">
+    <label for="fname">Name:</label><br>
+    <input type="text" id="fname" name="fname" placeholder="name.." required><br>
+    <label for="dob">DOB:</label><br>
+    <input type="text" id="dob" name="dob" placeholder="dob.." required onfocusout="calculate_age()"><br>
+    <label for="age">Age:</label><br>
+    <input type="text" id="age" name="age" placeholder="age.." disabled><br>
+    <label for="place">Place:</label><br>
+    <input type="text" id="place" name="place" placeholder="place.." required><br>
+    <label for="interest">Interest:</label><br>
+    <input type="text" id="interest" name="interest" placeholder="interest.." required><br>
+  </form>
+ </div>
+  <div id="right">
+    <button onclick="addNewRecord()">ADD</button>
+  <button onclick="editRecord()">EDIT</button>
+  <button onclick="deleleRecord()">DELETE</button>
+  </div>
+</section>
+<footer>
+
+</footer>
+
+ 
+      
+<script src="userTable.js"></script>
+</body>
+</html>
